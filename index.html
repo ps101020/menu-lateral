@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da página</title>
+</head>
+<style>
+    body{margin:0; }    
+   header { background-color: rgb(21, 3 , 98); font-size:25px; padding:8px; margin-left:0;
+   } 
+   a { color: white; font-weigth:bold; text-decoration: none; display:block;  margin-left: 13px;
+  }
+   
+   nav a {  
+  background-color:white;  background-color: rgb(21, 3 , 98); padding: 12px 10px 12px 32px;
+   }
+   
+   nav{position:fixed; z-index: 1;      background-color: rgb(21,3,98);  height:100%; left:0; top:0; overflow:hidden; width:0px; transition: width 0.3s; margin-left:0; 
+              
+   } 
+   
+   nav a:hover { color: rgb(21,3,99);  transition-duration: .2s; background-color:white;}
+   
+   main {
+   padding:5px;
+   transition: margin-left: 200px 0.5s;   }
+   
+</style>
+
+
+<body>
+    <header>
+        <!-- codigo para caracteries especiais &#9776; icone de menu -->
+        <a class="abrir" onclick="abrirMenu()" href="#">&#9776; Abrir</a>
+    </header>
+    <nav class="menu">
+      <a id="fechar" onclick="fecharMenu()" href="#">&times; fechar</a>
+      <a href="#">Home</a>
+      <a href="#">YouTube</a>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>  
+    </nav>
+ 
+    <main>
+           <h1>Exemplo menu lateral</h1>
+      <p>conteudo principal da página </p>  
+        
+    </main>
+    
+    <script>
+        
+        function abrirMenu() {
+       document.querySelector("nav").style="width:200px;"; document.querySelector("main").style="margin-left: 220px;";
+       
+   
+        }
+        
+        function fecharMenu() {
+       document.querySelector("nav").style="width=0;";
+       document.querySelector("main").style="margin-left:0;";
+      
+        
+        }
+        
+    </script>
+    
+</body>
+</html>
